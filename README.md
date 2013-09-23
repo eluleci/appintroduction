@@ -6,6 +6,10 @@ App Introduction is a library that helps to create introduction menu for the use
 Only thing that you need to do is giving the id of the element to show (if you want to point an element) and
 write the message. You can choose pointing type like vertical or horizontal. Then the rest is done by library.
 
+The messages that you add to the same AppIntroduction object are stored and showed to the user one by one.
+You can create listeners for beginning and after the steps so you can have full control on steps. Also when you can
+create a listener to know when user dismisses the AppIntroduction.
+
 Features included
 -----------------
 * Showing the message in the middle.
@@ -26,7 +30,7 @@ Screenshots
 
 ## Usage
 
-These are the codes for the creation of the messages in the screenshots.
+The first three step additions are the codes for the creation of the messages in the screenshots.
 
 ```java
 
@@ -41,7 +45,34 @@ appIntroduction.addStep(new Step(R.id.search,
                 
 // adding message with horizontal pointer
 appIntroduction.addStep(new Step(R.id.next,
-                getResources().getString(R.string.uc_shuffle_3), AppIntroduction.SIDE_HORIZONTAL));                
+                getResources().getString(R.string.uc_shuffle_3), AppIntroduction.SIDE_HORIZONTAL));           
+                
+                
+                
+// constructing AppIntroduction for listening dismiss of the user
+appIntroduction = new AppIntroduction(this) {
+    @Override
+    public void onDismiss() {
+        super.onDismiss();
+        // handle user's dismiss
+    }
+};              
+
+
+
+// listeners for steps. you can do some changes before or after a step
+appIntroduction.addStep(new Step(R.id.second_language,
+        getResources().getString(R.string.uc_shuffle_11), AppIntroduction.SIDE_VERTICAL, new StepActionListener() {
+    @Override
+    public void beforeMessageShown() {
+        listenModeSettings.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void afterMessageShown() {
+        listenModeSettings.setVisibility(View.GONE);
+    }
+}));
 
 ```
 
