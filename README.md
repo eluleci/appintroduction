@@ -15,7 +15,7 @@ Features included
 Screenshots
 -----------
 
-![Message in the middle][1] ... ![Message with vertical pointer][2] ... ![Message with horizontal pointer][3] 
+![Message in the middle][1].![Message with vertical pointer][2].![Message with horizontal pointer][3] 
 
 
  [1]: https://photos-1.dropbox.com/t/0/AACWBpoh1btyvSWpiw1PnB7arr3NJIaPEht1rTv8SE9i8A/12/73509957/png/1024x768/3/1379955600/0/2/1.png/zKxqyHz-eKQcbhYBor5uTrye-CMwIRK4YgRPMAsYVU0
