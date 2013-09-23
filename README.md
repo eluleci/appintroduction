@@ -1,13 +1,13 @@
 App Introduction
 ===================
 
-App Introduction is a library that helps to create introduction menu for the users. 
+App Introduction is a library that helps to create introduction menu for users. 
 
 Only thing that you need to do is giving the id of the element to show (if you want to point an element) and
 write the message. You can choose pointing type like vertical or horizontal. Then the rest is done by library.
 
 The messages that you add to the same AppIntroduction object are stored and showed to the user one by one.
-You can create listeners for beginning and after the steps so you can have full control on steps. Also when you can
+You can create listeners for beginning and after the steps so you can have full control on steps. Also you can
 create a listener to know when user dismisses the AppIntroduction.
 
 Features included
