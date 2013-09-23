@@ -22,10 +22,10 @@ Screenshots
 ![Message in the middle][1].![Message with vertical pointer][2].![Message with horizontal pointer][3].![Message with vertical pointer again.][4]
 
 
- [1]: https://photos-1.dropbox.com/t/0/AACWBpoh1btyvSWpiw1PnB7arr3NJIaPEht1rTv8SE9i8A/12/73509957/png/1024x768/3/1379955600/0/2/1.png/zKxqyHz-eKQcbhYBor5uTrye-CMwIRK4YgRPMAsYVU0
- [2]: https://photos-3.dropbox.com/t/0/AABzE7-5hizcUjhHYVYwz5t3MIOffTveVFjrUYn13PNhaQ/12/73509957/png/1024x768/3/1379955600/0/2/2.png/bO8SeezFTwm6qEuTEtcdJcKX_cI_xtAurZWhpOqr7pY
- [3]: https://photos-3.dropbox.com/t/0/AABtlaKUBP7DdEX1C0tKNg1Rdwd2seDJNWVTmY7I_56zWQ/12/73509957/png/1024x768/3/1379955600/0/2/3.png/TgBSgOUUVE3J1JitKsdDTrGbae8dXzjlKmcblNgcjVg
- [4]: https://photos-3.dropbox.com/t/0/AACcjUhv-_ZgahyQFatmZCcRGOIgtH6pjH3m47RFVoTlSw/12/73509957/png/1024x768/3/1379955600/0/2/4.png/CpSUpbW9Onl_3Y0GyfxzpwZwg_NzjC0l269QfMBrm0k
+ [1]: https://raw.github.com/eluleci/appintroduction/master/screenshots/1.png
+ [2]: https://raw.github.com/eluleci/appintroduction/master/screenshots/2.png
+ [3]: https://raw.github.com/eluleci/appintroduction/master/screenshots/3.png
+ [4]: https://raw.github.com/eluleci/appintroduction/master/screenshots/4.png
  
 
 ## Usage
