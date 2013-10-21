@@ -2,6 +2,7 @@ package com.eluleci.appintroduction;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -11,6 +12,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.RotateAnimation;
 import android.widget.*;
 import com.eluleci.appintroduction.listeners.UserActionListener;
+import com.eluleci.appintroduction.views.DynamicDrawable;
 import com.eluleci.appintroduction.views.TextViewLight;
 import com.eluleci.appintroduction.views.TextViewRegular;
 
@@ -75,19 +77,15 @@ public class TextBaloon extends RelativeLayout {
         root.addView(this);
 
         indicator = new ImageView(activity);
-        indicator.setImageDrawable(activity.getResources().getDrawable(R.drawable.arrow_river));
         this.addView(indicator);
         indicator.setLayoutParams(new LayoutParams(indicatorSize, indicatorSize));
 
         container = new LinearLayout(activity);
         container.setOrientation(LinearLayout.VERTICAL);
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-            container.setBackgroundDrawable(activity.getResources().getDrawable(R.drawable.tutorial_baloon));
-        } else {
-            container.setBackground(activity.getResources().getDrawable(R.drawable.tutorial_baloon));
-        }
         this.addView(container);
         container.setLayoutParams(new LayoutParams(screenWidth, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        setTheme(AppIntroduction.PETER_RIVER);
 
         explanationTextView = new TextViewLight(activity);
         explanationTextView.setTextColor(Color.WHITE);
@@ -148,6 +146,108 @@ public class TextBaloon extends RelativeLayout {
                 userActionListener.onDismiss();
             }
         });
+    }
+
+    public void setTheme(int theme){
+
+        int indicatorDrawableId = R.drawable.arrow_peter_river;
+        int containerBackDrawableId = R.color.peter_river;
+
+
+        switch (theme){
+            case AppIntroduction.TURQUOISE:
+                indicatorDrawableId = R.drawable.arrow_turquoise;
+                containerBackDrawableId = R.color.turquoise;
+                break;
+            case AppIntroduction.EMERALD:
+                indicatorDrawableId = R.drawable.arrow_emerald;
+                containerBackDrawableId = R.color.emerald;
+                break;
+            case AppIntroduction.PETER_RIVER:
+                indicatorDrawableId = R.drawable.arrow_peter_river;
+                containerBackDrawableId = R.color.peter_river;
+                break;
+            case AppIntroduction.AMETHYST:
+                indicatorDrawableId = R.drawable.arrow_amethyst;
+                containerBackDrawableId = R.color.amethyst;
+                break;
+            case AppIntroduction.WET_ASPHALT:
+                indicatorDrawableId = R.drawable.arrow_wet_asphalt;
+                containerBackDrawableId = R.color.wet_asphalt;
+                break;
+            case AppIntroduction.GREEN_SEA:
+                indicatorDrawableId = R.drawable.arrow_green_sea;
+                containerBackDrawableId = R.color.green_sea;
+                break;
+            case AppIntroduction.NEPHRITIS:
+                indicatorDrawableId = R.drawable.arrow_neprhitis;
+                containerBackDrawableId = R.color.nephritis;
+                break;
+            case AppIntroduction.BELIZE_HOLE:
+                indicatorDrawableId = R.drawable.arrow_belize_hole;
+                containerBackDrawableId = R.color.belize_hole;
+                break;
+            case AppIntroduction.WISTERIA:
+                indicatorDrawableId = R.drawable.arrow_wisteria;
+                containerBackDrawableId = R.color.wisteria;
+                break;
+            case AppIntroduction.MIDNIGHT_BLUE:
+                indicatorDrawableId = R.drawable.arrow_midnight_blue;
+                containerBackDrawableId = R.color.midnight_blue;
+                break;
+            case AppIntroduction.SUN_FLOWER:
+                indicatorDrawableId = R.drawable.arrow_sunflower;
+                containerBackDrawableId = R.color.sun_flower;
+                break;
+            case AppIntroduction.CARROT:
+                indicatorDrawableId = R.drawable.arrow_carrot;
+                containerBackDrawableId = R.color.carrot;
+                break;
+            case AppIntroduction.ALIZARIN:
+                indicatorDrawableId = R.drawable.arrow_alizarin;
+                containerBackDrawableId = R.color.alizarin;
+                break;
+            case AppIntroduction.CLOUDS:
+                indicatorDrawableId = R.drawable.arrow_clouds;
+                containerBackDrawableId = R.color.clouds;
+                break;
+            case AppIntroduction.CONCRETE:
+                indicatorDrawableId = R.drawable.arrow_concrete;
+                containerBackDrawableId = R.color.concrete;
+                break;
+            case AppIntroduction.ORANGE:
+                indicatorDrawableId = R.drawable.arrow_orange;
+                containerBackDrawableId = R.color.orange;
+                break;
+            case AppIntroduction.PUMPKIN:
+                indicatorDrawableId = R.drawable.arrow_pumpkin;
+                containerBackDrawableId = R.color.pumpkin;
+                break;
+            case AppIntroduction.POMEGRANATE:
+                indicatorDrawableId = R.drawable.arrow_pomegranate;
+                containerBackDrawableId = R.color.pomegranate;
+                break;
+            case AppIntroduction.SILVER:
+                indicatorDrawableId = R.drawable.arrow_silver;
+                containerBackDrawableId = R.color.silver;
+                break;
+            case AppIntroduction.ASBESTOS:
+                indicatorDrawableId = R.drawable.arrow_asbestos;
+                containerBackDrawableId = R.color.asbestos;
+                break;
+        }
+
+
+        Drawable indicatorDrawable = mContext.getResources().getDrawable(indicatorDrawableId);
+        DynamicDrawable containerBackDrawable= new DynamicDrawable(
+                mContext.getResources().getColor(containerBackDrawableId), 4);
+
+        indicator.setImageDrawable(indicatorDrawable);
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            container.setBackgroundDrawable(containerBackDrawable);
+        } else {
+            container.setBackground(containerBackDrawable);
+        }
     }
 
     protected void changeElement(final Step step) {
@@ -315,6 +415,9 @@ public class TextBaloon extends RelativeLayout {
 
     // not working yet
     public void setColor(int colorCode) {
+        //LayerDrawable cld = (LayerDrawable) container.getBackground();
+        //cld.get
+        //((ShapeDrawable) container.getBackground()).getPaint().setColor(getResources().getColor(R.color.amethyst));
         //LayerDrawable bgDrawable = (LayerDrawable) container.getBackground();
         //final GradientDrawable shape = (GradientDrawable) bgDrawable.findDrawableByLayerId(R.id.border_radius_shape);
         //shape.setColor(Color.parseColor("#e67e22"));
