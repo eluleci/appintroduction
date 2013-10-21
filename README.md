@@ -99,12 +99,12 @@ appIntroduction.addStep(new Step(R.id.second_language,
         getResources().getString(R.string.uc_shuffle_11), AppIntroduction.SIDE_VERTICAL, new StepActionListener() {
     @Override
     public void beforeMessageShown() {
-        listenModeSettings.setVisibility(View.VISIBLE);
+        // do something before showing message
     }
 
     @Override
     public void afterMessageShown() {
-        listenModeSettings.setVisibility(View.GONE);
+        // do something after showing message
     }
 }));
 
