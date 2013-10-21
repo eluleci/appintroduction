@@ -15,6 +15,8 @@ Features included
 * Showing the message in the middle.
 * Showing the message with horizontal pointer.
 * Showing the message with vertical pointer.
+* Remembering past (not showing messages if already shown).
+* Changing theme (Selecting one of the colors in flatuicolors.com).
 
 Screenshots
 -----------
@@ -26,7 +28,19 @@ Screenshots
  [2]: https://raw.github.com/eluleci/appintroduction/master/screenshots/2.png
  [3]: https://raw.github.com/eluleci/appintroduction/master/screenshots/3.png
  [4]: https://raw.github.com/eluleci/appintroduction/master/screenshots/4.png
- 
+
+Theme Screenshots
+-----------
+
+![Message in the middle][5].![Message with vertical pointer][6].![Message with horizontal pointer][7].![Message with vertical pointer again.][8]
+![Message in the middle][9].
+
+
+ [5]: https://raw.github.com/eluleci/appintroduction/master/screenshots/5.png
+ [6]: https://raw.github.com/eluleci/appintroduction/master/screenshots/6.png
+ [7]: https://raw.github.com/eluleci/appintroduction/master/screenshots/7.png
+ [8]: https://raw.github.com/eluleci/appintroduction/master/screenshots/8.png
+ [9]: https://raw.github.com/eluleci/appintroduction/master/screenshots/flatuicolors.png
 
 ## Usage
 
