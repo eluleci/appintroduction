@@ -32,15 +32,16 @@ Screenshots
 Theme Screenshots
 -----------
 
-![Message in the middle][5].![Message with vertical pointer][6].![Message with horizontal pointer][7].![Message with vertical pointer again.][8]
-![Message in the middle][9].
+![Orange][5].![Wet Asphalt][6].![Turquoise][7].![Asbestos][8].![Wisteria][9].![Pomegranate][10].![colors][11].
 
 
  [5]: https://raw.github.com/eluleci/appintroduction/master/screenshots/5.png
  [6]: https://raw.github.com/eluleci/appintroduction/master/screenshots/6.png
  [7]: https://raw.github.com/eluleci/appintroduction/master/screenshots/7.png
  [8]: https://raw.github.com/eluleci/appintroduction/master/screenshots/8.png
- [9]: https://raw.github.com/eluleci/appintroduction/master/screenshots/flatuicolors.png
+ [9]: https://raw.github.com/eluleci/appintroduction/master/screenshots/9.png
+ [10]: https://raw.github.com/eluleci/appintroduction/master/screenshots/10.png
+ [11]: https://raw.github.com/eluleci/appintroduction/master/screenshots/flatuicolors.png
 
 ## Usage
 

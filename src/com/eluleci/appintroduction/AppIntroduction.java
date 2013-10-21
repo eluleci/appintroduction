@@ -96,6 +96,10 @@ public class AppIntroduction implements UserActionListener {
         checkUsersChoice = remember;
     }
 
+    public void setTheme(int theme){
+        textBaloon.setTheme(theme);
+    }
+
     public boolean isShownBefore() {
         SharedPreferences settings = mContext.getSharedPreferences(PREF_NAME, 0);
 

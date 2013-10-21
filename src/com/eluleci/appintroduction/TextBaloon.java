@@ -148,11 +148,10 @@ public class TextBaloon extends RelativeLayout {
         });
     }
 
-    public void setTheme(int theme){
+    protected void setTheme(int theme){
 
         int indicatorDrawableId = R.drawable.arrow_peter_river;
         int containerBackDrawableId = R.color.peter_river;
-
 
         switch (theme){
             case AppIntroduction.TURQUOISE:
