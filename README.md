@@ -6,9 +6,10 @@ App Introduction is a library that helps to create introduction menu for users.
 Only thing that you need to do is giving the id of the element to show (if you want to point an element) and
 write the message. You can choose pointing type like vertical or horizontal. Then the rest is done by library.
 
-The messages that you add to the same AppIntroduction object are stored and showed to the user one by one.
-You can create listeners for beginning and after the steps so you can have full control on steps. Also you can
-create a listener to know when user dismisses the AppIntroduction.
+The messages that you add to same AppIntroduction object are stored and showed to the user one by one.
+When user sees messages of an Activity once, they will not be shown again. You can select one of the 20 themes.
+You can create listeners for doing some actions before and after each step, so you can have full control on steps.
+Also you can create a listener to know when user dismisses the AppIntroduction.
 
 Features included
 -----------------
@@ -17,6 +18,8 @@ Features included
 * Showing the message with vertical pointer.
 * Remembering past (not showing messages if already shown).
 * Changing theme (Selecting one of the colors in http://flatuicolors.com).
+* Creating listeners for before/after events for each step.
+* Creating listeners for user dismiss.
 
 Screenshots
 -----------
