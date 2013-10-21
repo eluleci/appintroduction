@@ -16,7 +16,7 @@ Features included
 * Showing the message with horizontal pointer.
 * Showing the message with vertical pointer.
 * Remembering past (not showing messages if already shown).
-* Changing theme (Selecting one of the colors in flatuicolors.com).
+* Changing theme (Selecting one of the colors in http://flatuicolors.com).
 
 Screenshots
 -----------
@@ -24,17 +24,21 @@ Screenshots
 ![Message in the middle][1].![Message with vertical pointer][2].![Message with horizontal pointer][3].![Message with vertical pointer again.][4]
 
 
+Theme Screenshots
+-----------
+
+![Orange][5].![Wet Asphalt][6].![Turquoise][7].![Asbestos][8].![Wisteria][9].![Pomegranate][10].
+
+
+Colors
+-----------
+
+![colors][11].
+
  [1]: https://raw.github.com/eluleci/appintroduction/master/screenshots/1.png
  [2]: https://raw.github.com/eluleci/appintroduction/master/screenshots/2.png
  [3]: https://raw.github.com/eluleci/appintroduction/master/screenshots/3.png
  [4]: https://raw.github.com/eluleci/appintroduction/master/screenshots/4.png
-
-Theme Screenshots
------------
-
-![Orange][5].![Wet Asphalt][6].![Turquoise][7].![Asbestos][8].![Wisteria][9].![Pomegranate][10].![colors][11].
-
-
  [5]: https://raw.github.com/eluleci/appintroduction/master/screenshots/5.png
  [6]: https://raw.github.com/eluleci/appintroduction/master/screenshots/6.png
  [7]: https://raw.github.com/eluleci/appintroduction/master/screenshots/7.png
@@ -50,6 +54,12 @@ The first three step additions are the codes for the creation of the messages in
 ```java
 
 AppIntroduction appIntroduction = new AppIntroduction(this);
+
+// remembering past. not showing again if already shown before
+appIntroduction.rememberPast(false);
+
+// changing theme. selecting one of the colors
+appIntroduction.setTheme(AppIntroduction.POMEGRANATE);
 
 // adding message into middle
 appIntroduction.addStep(new Step(getResources().getString(R.string.uc_main_1)));
@@ -88,6 +98,14 @@ appIntroduction.addStep(new Step(R.id.second_language,
         listenModeSettings.setVisibility(View.GONE);
     }
 }));
+
+// starting introduction. you CANNOT call this in onCreate method of activity.
+// because the content view of activity won't be ready in onCreate
+appIntroduction.start();
+
+// starting introduction. you can call this in onCreate method in activity.
+// it will wait for 0.5 seconds for content view to be ready.
+appIntroduction.startWithDelay();
 
 ```
 
