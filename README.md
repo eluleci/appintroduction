@@ -27,13 +27,13 @@ Screenshots
 Theme Screenshots
 -----------
 
-![Orange][5].![Wet Asphalt][6].![Turquoise][7].![Asbestos][8].![Wisteria][9].![Pomegranate][10].
+![Orange][5].![Wet Asphalt][6].![Turquoise][7].![Asbestos][8].![Wisteria][9].![Pomegranate][10]
 
 
 Colors
 -----------
 
-![colors][11].
+![colors][11]
 
  [1]: https://raw.github.com/eluleci/appintroduction/master/screenshots/1.png
  [2]: https://raw.github.com/eluleci/appintroduction/master/screenshots/2.png
@@ -49,17 +49,17 @@ Colors
 
 ## Usage
 
-The first three step additions are the codes for the creation of the messages in the screenshots.
-
 ```java
 
 AppIntroduction appIntroduction = new AppIntroduction(this);
 
 // remembering past. not showing again if already shown before
-appIntroduction.rememberPast(false);
+appIntroduction.rememberPast(true);
 
 // changing theme. selecting one of the colors
-appIntroduction.setTheme(AppIntroduction.POMEGRANATE);
+appIntroduction.setTheme(AppIntroduction.TURQUOISE);
+
+
 
 // adding message into middle
 appIntroduction.addStep(new Step(getResources().getString(R.string.uc_main_1)));
@@ -72,8 +72,8 @@ appIntroduction.addStep(new Step(R.id.search,
 appIntroduction.addStep(new Step(R.id.next,
                 getResources().getString(R.string.uc_shuffle_3), AppIntroduction.SIDE_HORIZONTAL));           
                 
-                
-                
+
+
 // constructing AppIntroduction for listening dismiss of the user
 appIntroduction = new AppIntroduction(this) {
     @Override
