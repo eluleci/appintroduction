@@ -49,6 +49,12 @@ Colors
 
 ## Usage
 
+For using this library in Android Studio (IntelliJ IDEA) you need to activate including assets from dependencies.
+- Open project structure (Right Click on Project -> 'Open Module Settings')
+- Select 'Facets' from left menu
+- Select 'Compiler' tab at right
+- Activate 'Include assets from dependencies into APK' beneath 'Resources Packaging'
+
 ```java
 
 AppIntroduction appIntroduction = new AppIntroduction(this);
